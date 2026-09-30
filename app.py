@@ -317,9 +317,8 @@ with st.sidebar:
 🔗 **PROJECT INFO**
 
 
-- 🏢 **ORGANIZATION**<br> 
-[Unified Mentor](https://unifiedmentor.com)
-
+- 🏢 **PROJECT**<br>
+Data Analytics Project
 
 - 💼 **ANALYST**<br>
 [Akash Bareth](https://www.linkedin.com/in/akash-bareth-36660a420)
