@@ -322,8 +322,9 @@ with st.sidebar:
 - 🏢 **ORGANIZATION**<br> 
 [Unified Mentor](https://unifiedmentor.com)
 
-- 💼 **ANALYST**<br> 
-[Pratham Rangoonwala](https://www.linkedin.com/in/pratham-rangoonwala-a79872359)
+
+- 💼 **ANALYST**<br>
+[Akash Bareth](https://www.linkedin.com/in/akash-bareth-36660a420)
 
 ---
 """,
