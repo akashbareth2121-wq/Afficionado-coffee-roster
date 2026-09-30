@@ -316,8 +316,6 @@ with st.sidebar:
 
 🔗 **PROJECT INFO**
 
-- 🎓 **INSTRUCTOR**<br> 
-[Sai Kagne](https://saikagne.github.io/)
 
 - 🏢 **ORGANIZATION**<br> 
 [Unified Mentor](https://unifiedmentor.com)
