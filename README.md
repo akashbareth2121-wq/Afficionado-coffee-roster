@@ -2,7 +2,7 @@
 
 An interactive data analytics dashboard built to analyze coffee shop transaction data and identify **revenue drivers, product performance, customer demand patterns, and menu optimization opportunities**.
 
-**Live Dashboard:** [Add your Streamlit live link here]
+**Live Dashboard:**https://afficionado-coffee-rostergit-dd4xpvqtghkftvnq5bvtfs.streamlit.app/
 
 ## 📊 Project Overview
 
