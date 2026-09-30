@@ -1,98 +1,172 @@
-# Product Optimization & Revenue Contribution Analysis — Afficionado Coffee Roasters
+# ☕ Coffee Shop Sales Analytics
 
-An interactive dashboard analyzing transaction-level sales data from a coffee retailer to identify revenue drivers, underperforming products, and menu optimization opportunities.
+An interactive data analytics dashboard built to analyze coffee shop transaction data and identify **revenue drivers, product performance, customer demand patterns, and menu optimization opportunities**.
 
-**Live dashboard:** https://coffee-revenue-dashboard-2026.streamlit.app/
+**Live Dashboard:** [Add your Streamlit live link here]
 
-## The Problem
+## 📊 Project Overview
 
-A coffee retailer's menu has dozens of products across coffee, tea, bakery, and other categories, but not every item pulls its weight. Without breaking revenue down by product and category, it's easy to keep underperforming items on the menu simply because no one has quantified how little they actually contribute. This project analyzes 149K+ transaction records to find out which products are genuinely driving revenue, and which ones are just taking up shelf space.
+This project analyzes **149K+ transaction records** from a coffee retailer to understand which products and categories contribute most to revenue, which products underperform, and how sales vary throughout the day.
 
-## What I Found
+The goal is to transform raw transaction data into actionable business insights using **Python, Pandas, NumPy, Matplotlib, Seaborn, Plotly, and Streamlit**.
 
-**Category-level split:** Coffee is the dominant category at 38.6% of revenue, followed by Tea at 28.1%. Bakery (11.8%), Drinking Chocolate (10.4%), and Coffee Beans (5.7%) make up most of the rest, with a long tail of smaller categories contributing the final 5.4%.
+## 🔍 Key Insights
 
-**Revenue concentration (Pareto):** Across the full catalog of 80 product types, 42 products — 52.5% of the catalog — generate 80% of total revenue. The remaining 38 products (47.5% of the catalog) generate only 20%. That's a much flatter concentration curve than a classic 80/20 split, which tells a different story than "a few products carry the business" — here, revenue is spread across a genuinely large share of the menu, and the long tail is proportionally large too. This flatness also shows up at the individual product level: the single top product accounts for only 3.03% of total revenue — compare that to a business with one dominant hero SKU, where the top product alone might carry 15-20%.
+### Category Performance
 
-**Scale of the business:** Across the full dataset, total sales volume reached 214,470 units, at an average revenue of ₹3.26 per unit.
+* Coffee contributes approximately **38.6% of total revenue**.
+* Tea contributes approximately **28.1%**.
+* Bakery contributes approximately **11.8%**.
+* Drinking Chocolate contributes approximately **10.4%**.
+* Coffee Beans contribute approximately **5.7%**.
 
-**Product segmentation:** Classifying products by revenue and sales volume into Hero, Potential, and Dead categories showed 41 products as high performers actively driving the business, against 35 underperforming products. The single strongest performer was Sustainably Grown Organic (Lg), driving the highest revenue in the catalog. The clearest underperformer was Dark Chocolate, showing up in the bottom 10 products by revenue with consistently low contribution — a direct candidate for removal or repositioning.
+### Revenue Concentration
 
-**Operational pattern:** Sales peak at 10:00 and hit their lowest point at 20:00 — a finding that goes beyond product-level analysis into staffing and inventory timing, and wasn't something I set out to look for, but the hourly breakdown made it obvious.
+* The dataset contains **80 product types**.
+* **42 products (52.5%)** generate approximately **80% of total revenue**.
+* The remaining **38 products (47.5%)** contribute approximately **20%**.
+* The top individual product contributes around **3.03% of total revenue**, indicating that revenue is distributed across a broad range of products.
 
-## A Real Technical Problem I Ran Into
+### Sales Volume
 
-I was new to building heatmaps and Pareto charts in this level of detail, and both gave me real trouble before they looked right. The heatmap's color scale and cell sizing were the hardest part — the default settings either washed out the differences between mid-range values or made the extremes so dominant that nothing else was readable. I had to manually tune the color scale until the contrast actually matched the data instead of just looking colorful.
+* Total sales volume: **214,470 units**
+* Average revenue per unit: approximately **₹3.26**
 
-The Pareto chart had a separate problem: with dozens of product labels on the x-axis, the default horizontal labels overlapped into an unreadable blur. I had to rotate the axis labels to make them legible without cutting product names short.
+### Product Performance
 
-On top of that, getting the overall dashboard color theme to feel intentional (rather than default Streamlit styling) took several iterations — small thing, but it's the difference between a dashboard that looks like a template and one that looks designed.
+Products were segmented based on revenue and sales volume into:
 
-## Core Analytical Areas
+* **Hero Products** — high revenue and high sales performance
+* **Potential Products** — products with growth opportunities
+* **Dead Products** — relatively low revenue and sales contribution
 
-- **Product Performance** — top/bottom products by revenue and volume, product ranking
-- **Revenue Contribution** — product-wise and category-wise revenue share
-- **Pareto Analysis (80/20)** — revenue concentration and long-tail detection
-- **Demand Analysis** — revenue by hour, category demand patterns
-- **Product Segmentation** — Hero / Potential / Dead classification by revenue vs. sales volume
+The analysis identified **41 high-performing products** and **35 underperforming products**.
 
-## Key KPIs
+### Demand by Hour
 
-| KPI | Definition |
-|---|---|
-| Top Product Share | Highest single product's revenue ÷ Total revenue |
-| Sales Volume | Total units sold across the full catalog |
-| Revenue Share | Selected segment's revenue ÷ Total revenue |
-| Concentration | % of products required to generate 80% of total revenue |
-| Revenue per Unit | Total revenue ÷ Total units sold |
+* Sales reach their highest level around **10:00 AM**.
+* Sales reach their lowest level around **8:00 PM**.
+* This provides useful information for **staffing, inventory planning, and operational decisions**.
 
-## Tech Stack
+## 📈 Core Analysis
 
-| Category | Tools |
-|---|---|
-| Language | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) |
-| Data Processing | ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white) |
-| Visualization | ![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=plotly&logoColor=black) ![Seaborn](https://img.shields.io/badge/Seaborn-4C78A8?style=for-the-badge) ![Plotly](https://img.shields.io/badge/plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white) |
-| Dashboard | ![Streamlit](https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) |
+* **Product Performance** — Top and bottom products by revenue and sales volume
+* **Revenue Contribution** — Product-wise and category-wise revenue analysis
+* **Pareto Analysis** — Identification of revenue concentration and long-tail products
+* **Demand Analysis** — Sales trends by hour and category
+* **Product Segmentation** — Hero, Potential, and Dead product classification
 
-## Dashboard Features
+## 📌 Key KPIs
 
-- Interactive filtering by category, product type, and store location
-- Adjustable "Top N Products" view
-- Revenue Contribution Tree (treemap) broken down by category and sub-category
-- Product Ranking, Revenue Concentration (Pareto), and Product Performance Matrix views
-- Hourly demand heatmap showing peak and low-demand periods
+| KPI                   | Definition                                        |
+| --------------------- | ------------------------------------------------- |
+| Top Product Share     | Top product revenue ÷ Total revenue               |
+| Sales Volume          | Total units sold                                  |
+| Revenue Share         | Segment revenue ÷ Total revenue                   |
+| Revenue Concentration | % of products required to generate 80% of revenue |
+| Revenue per Unit      | Total revenue ÷ Total units sold                  |
 
-## Project Structure
+## 🛠️ Tech Stack
 
-```
-Afficionado-coffee-roaster/
+| Category      | Tools                           |
+| ------------- | ------------------------------- |
+| Programming   | Python                          |
+| Data Analysis | Pandas, NumPy                   |
+| Visualization | Matplotlib, Seaborn, Plotly     |
+| Dashboard     | Streamlit                       |
+| Data Source   | Coffee shop transaction dataset |
+
+## 🎯 Dashboard Features
+
+* Interactive filtering by category
+* Product-level analysis
+* Store/location filtering
+* Adjustable Top-N product analysis
+* Revenue contribution treemap
+* Product ranking
+* Pareto revenue analysis
+* Product performance matrix
+* Hourly sales heatmap
+* Revenue and sales-volume analysis
+
+## 📂 Project Structure
+
+```text
+Coffee-Shop-Sales-Analytics/
+│
 ├── app.py
 ├── requirements.txt
-├── Afficionado Coffee Roasters.xlsx
-├── Final_research_paper.pdf
-├── .devcontainer/
+├── README.md
 ├── .gitignore
-├── .gitattributes
-└── README.md
+├── data/
+│   └── coffee_sales_data.xlsx
+│
+└── Final_research_paper.pdf
 ```
 
-## Run It Locally
+## 🚀 Run Locally
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Pratham719/Afficionado-coffee-roster.git
-cd Afficionado-coffee-roaster
+git clone https://github.com/akashbareth2121-wq/coffee-shop-sales-analytics.git
+```
+
+### 2. Open the project
+
+```bash
+cd coffee-shop-sales-analytics
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### 4. Run the Streamlit dashboard
+
+```bash
 streamlit run app.py
 ```
 
-## What I'd Do Differently
+The dashboard will open in your browser.
 
-Given more time, I'd connect the operational finding (peak at 10:00, low at 20:00) back to the product segmentation — right now they're two separate views, but the more useful analysis would show whether Hero products and Dead products have different demand curves throughout the day, which would make the recommendation more actionable for staffing and inventory decisions, not just menu decisions.
+## 💡 Challenges & Learning
 
-## About
+One of the main challenges was creating readable and meaningful visualizations from a large transaction dataset.
 
-Built by Pratham Rangoonwala, Data Analyst Intern at Unified Mentor, as an independent portfolio project.
+The **heatmap** required careful tuning of the color scale so that both high- and medium-demand periods remained visible.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pratham-ds/)
-[![Streamlit](https://img.shields.io/badge/Live_Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://coffee-revenue-dashboard-2026.streamlit.app/)
+The **Pareto chart** also required customization because the large number of product names caused overlapping labels. Axis rotation and formatting were used to improve readability.
+
+Another learning experience was customizing the Streamlit dashboard so that it looked like a dedicated analytics application rather than a default Streamlit template.
+
+## 🔮 Future Improvements
+
+Future versions of this project could:
+
+* Connect product segmentation with hourly demand
+* Analyze Hero and Dead product demand throughout the day
+* Add customer-level purchasing analysis
+* Add sales forecasting
+* Add inventory optimization
+* Add automated business recommendations
+* Deploy the dashboard with a custom domain
+
+## 👨‍💻 About
+
+**Built by Akash Bareth**
+
+Data Analyst | Python | SQL | Data Visualization
+
+This project was developed as a portfolio project to demonstrate practical skills in **data cleaning, exploratory data analysis, business analytics, data visualization, and interactive dashboard development**.
+
+### 🔗 Connect With Me
+
+* **GitHub:** https://github.com/akashbareth2121-wq
+* **LinkedIn:** https://www.linkedin.com/in/akash-bareth-36660a420/
+
+---
+
+⭐ If you found this project useful, consider giving the repository a star!
